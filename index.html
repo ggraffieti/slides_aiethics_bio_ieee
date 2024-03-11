@@ -21,8 +21,75 @@
     <div class="slides">
       <section data-markdown>
         <textarea data-template>
+        <section class="title-slide-lol">
+        
+        ## Introduction to AI Ethics 
+        Gabriele Graffieti
+        
+        ---- 
+
+        IEEE student branch seminar <!-- .element: class="smaller" --> 
+
+        March 19, 2024 <!-- .element: class="smaller" --> 
+        </section> 
+        ---
+        ## Who I am
+        <div class="two-c-container" data-markdown>
+          <div class="two-c-col-l">
+            <img src="./img/mine.jpg" width="90%">
+          </div>
+          <div class="two-c-col-r" data-markdown>
+
+          - Algorithm Engineer @ [Ambrella](https://www.ambarella.com)
+            - Deep Learning & Computer Vision
+          - Head of AI research @ [AI for People](https://www.aiforpeople.org)
+          - Past researche \& PhD Student @ [Unibo](https://www.unibo.it/en/homepage)
+            - Main research interests: Continual Learning, GenAI and Ethics
+          </div>
+        </div>
+        ---
+        <section data-background-iframe="https://www.ambarella.com"
+          data-background-interactive>
+        </section>
+        ---
+        ### Ambarella - Vislab
+        - Research division of Ambarella on self-driving cars 
+          - 80+ people only in Parma <!-- .element: class="fragment" data-fragment-index="1" -->
+          - ~1,000 worldwide (US, TW, IT, CH, DE, ...) <!-- .element: class="fragment" data-fragment-index="2" -->
+          - On self-driving cars, our competitors are Tesla, Wayve, Waymo, Uber, etc  <!-- .element: class="fragment" data-fragment-index="3" -->
+        ---
+        ### Ambarella - Vislab 
+        - 1998 1,000 miles (2,000+ km) on Italian highways with autonomous steering <!-- .element: class="fragment" data-fragment-index="1" -->
+        - 2005-2007 DARPA grand urban challenge, 100% autonomous <!-- .element: class="fragment" data-fragment-index="2" -->
+        - 2010 VIAC: 15k+ km autonomous driving (Parma-Beijing) <!-- .element: class="fragment" data-fragment-index="3" -->
+        - 2013 PROUD: 13km in Parma fully autonomous (L4) <!-- .element: class="fragment" data-fragment-index="4" -->
+        - 2015: Acquisition by Ambarella <!-- .element: class="fragment" data-fragment-index="5" -->
+        - 2020: Full autonomous driving demo @ CES 2020 Las Vegas <!-- .element: class="fragment" data-fragment-index="6" -->
+        - 2022-onwards: autonomous driving L4 in all environment with a single low power chip (no GPU, no high end CPU) <!-- .element: class="fragment" data-fragment-index="7" -->
+        ---
+        <section>
+          <iframe width="1120" height="630" src="https://www.youtube.com/embed/x1glAcRP1TM?t=28" VQ=hd1080 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        ---
+        ### Ambarella - Vislab
+        - What we do
+          - State-of-the-art research on autonomous driving <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Only company in Italy (and one of the very few in Europe) to be allowed to test and drive in any road, at any time, with any traffic condition <!-- .element: class="fragment" data-fragment-index="2" -->
+          - Both DL-based and classical approach to vehicle control, sensing, vision <!-- .element: class="fragment" data-fragment-index="3" -->
+          - Sensing only based on cameras (1 stereo, 5 mono) + radars <!-- .element: class="fragment" data-fragment-index="4" -->
+        ---
+        ### Ambarella - Vislab
+        - What we offer
+          - A unique international research environment in Italy <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Ideas → development → deployment in T=0 <!-- .element: class="fragment" data-fragment-index="2" -->
+          - Both industrial & academic research <!-- .element: class="fragment" data-fragment-index="3" -->
+          - (Very) competitive salary & lot of benefits <!-- .element: class="fragment" data-fragment-index="4" -->
+        - What we want <!-- .element: class="fragment" data-fragment-index="5" -->
+          - You! <!-- .element: class="fragment" data-fragment-index="6" -->
+          - Opening for thesis, PhD, jobs! <!-- .element: class="fragment" data-fragment-index="7" -->
+        ---
         ## Slide 1
-        - Blah <!-- .element: class="fragment" data-fragment-index="1" -->
+        - Blah  
         - blah blah <!-- .element: class="fragment" data-fragment-index="2" -->
         - blah blah blah <!-- .element: class="fragment" data-fragment-index="3" -->
         ---
@@ -34,8 +101,7 @@
           <img src="./img/dog.png" height="400px" > <!-- .element: class="fragment custom blur" -->
         </div>
         ---
-        <section data-background-iframe="https://colab.research.google.com/drive/1fPoKGW23BVa117hHAQtzCRBgysmmzoWj?usp=sharing" data-background-interactive>
-        </section>
+        <a href="https://colab.research.google.com/drive/1fPoKGW23BVa117hHAQtzCRBgysmmzoWj?usp=sharing" target="_blank">Demo!</a>
       </textarea>
       </section>
     </div>
@@ -50,7 +116,9 @@
     // - https://revealjs.com/config/
     Reveal.initialize({
       hash: true,
-
+      progress: false,
+      
+      
       // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
     });

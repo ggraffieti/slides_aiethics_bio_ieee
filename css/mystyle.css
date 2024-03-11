@@ -4,3 +4,44 @@
   .fragment.blur.visible {
     filter: none;
   }
+
+.two-c-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.two-c-col-l{
+  flex: 0.5;
+}
+.two-c-col-r{
+  flex: 1;
+}
+:root {
+  --r-main-font-size: 35px;
+}
+.reveal ul ul {
+  list-style-type: "▶  ";
+}
+.smaller {
+  font-size: 0.7em;
+  font-style: italic;
+  color: #AAAAAA;
+}
+div.logos {
+  margin-top: 30px;
+}
+div.logos img {
+  margin:0;
+  margin-right: 15px;
+  vertical-align: bottom;
+}
+.title-slide-lol {
+  background-image: url(/img/amba_logo.png),url(/img/vislab_logo.png);
+  background-size: 15%, 15%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 40% 90%, 60% 90%;
+}
+section.title-slide-lol {
+  background-image: none;
+}
