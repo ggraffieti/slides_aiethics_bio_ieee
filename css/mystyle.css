@@ -37,7 +37,7 @@ div.logos img {
   vertical-align: bottom;
 }
 .title-slide-lol {
-  background-image: url(/img/amba_logo.png),url(/img/vislab_logo.png);
+  background-image: url(./img/amba_logo.png),url(./img/vislab_logo.png);
   background-size: 15%, 15%;
   background-repeat: no-repeat, no-repeat;
   background-position: 40% 90%, 60% 90%;
