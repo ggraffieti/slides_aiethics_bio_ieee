@@ -28,9 +28,9 @@
         
         ---- 
 
-        IEEE student branch seminar <!-- .element: class="smaller" --> 
+        IEEE student branch seminar <!-- .element: class="smaller grey italic" --> 
 
-        March 19, 2024 <!-- .element: class="smaller" --> 
+        March 19, 2024 <!-- .element: class="smaller grey italic" --> 
         </section> 
         ---
         ## Who I am
@@ -87,7 +87,92 @@
         - What we want <!-- .element: class="fragment" data-fragment-index="5" -->
           - You! <!-- .element: class="fragment" data-fragment-index="6" -->
           - Opening for thesis, PhD, jobs! <!-- .element: class="fragment" data-fragment-index="7" -->
-        <!-- <a href="https://colab.research.google.com/drive/1fPoKGW23BVa117hHAQtzCRBgysmmzoWj?usp=sharing" target="_blank">Demo!</a> -->
+        ---
+        ## Why AI ethics?
+        <img src="https://github.com/manuelperuzzi/evolutionary-cars/blob/master/examples/evo-cars_track03.gif?raw=true"  height="500"> <!-- .element: class="fragment" data-fragment-index="1" -->
+        [https://github.com/ggraffieti/evolutionary-cars](https://github.com/ggraffieti/evolutionary-cars) <!-- .element: class="fragment smaller" data-fragment-index="1" -->
+        ---
+        ## Why AI ethics? <!-- .element: class="fragment fade-out long-transition" data-fragment-index="1" -->
+        <div class="r-stack">
+          <a href="" target="_blank">Demo!</a>
+          <img class="fragment fade-out long-transition" data-fragment-index="1" src="./img/oppenheimer.png"  height="500">
+        </div>  
+        ---
+        ## But that was just an example right?
+        <img src="./img/medical_care.png"  height="300"> <!-- .element: class="fragment" data-fragment-index="1" -->
+        <p class="fragment" data-fragment-index="1">Hint: <span class="fragment custom blur">think about how US healthcare works.</span></p>
+        ---
+        ## But that was just an example right?
+        <img src="./img/amazon_women.png"  height="300">
+        <p>Hint: <span class="fragment custom blur">think about gender representation inside tech jobs.</span></p>
+        ---
+        ## Well, we can try to fix this right?
+        ### How? <!-- .element: class="fragment" data-fragment-index="1" -->
+        ---
+        ### First of all we need to detect the problem
+        - How we tested the model?  <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Did train/validation/test sets were collected from the same distribution of data? <!-- .element: class="fragment" data-fragment-index="2" -->
+          - What metrics we used to evaluate the performance? <!-- .element: class="fragment" data-fragment-index="3" -->
+          - What we mean by performance?  <!-- .element: class="fragment" data-fragment-index="4" -->
+        ---
+        ### But if we remove all gender/race/unwanted information from the data?
+        - The AI system can infer them from remaining information <!-- .element: class="fragment" data-fragment-index="1" -->
+          - Gender from height/weight ratio <!-- .element: class="fragment" data-fragment-index="2" -->
+          - Ethnicity from specific disorders  <!-- .element: class="fragment" data-fragment-index="3" -->
+          - Level of weath from geographical information <!-- .element: class="fragment" data-fragment-index="4" -->
+          - ... <!-- .element: class="fragment" data-fragment-index="5" -->
+        ---
+        ### But models are really that powerful?
+        #### Spoiler: yes <!-- .element: class="fragment" data-fragment-index="1" -->
+        ---
+        ### Let's make a test
+        Question time:
+        What is a randon number?
+
+        Ok, now tell me a random integer between 1 and 10 <!-- .element: class="fragment" data-fragment-index="1" -->
+
+        What the distribution of answers should look like? <!-- .element: class="fragment" data-fragment-index="2" -->
+        ---
+        <img src="./img/human_random.jpg" height="600px">
+        ---
+        ### Now let's ask chatGPT
+        <img class="fragment fade-in" data-fragment-index="1" src="./img/random_gpt_ans.png" height="150px">
+        <br/>
+        <img class="fragment fade-in" data-fragment-index="2" src="./img/random_gpt_number.png" height="150px">
+
+        What if we ask chatGPT that many times? <!-- .element: class="fragment smaller" data-fragment-index="3" -->
+        ---
+        <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="1" src="./img/random_gpt_paper.jpg" width="70%"> 
+        
+        <div class="two-c-container">
+          <div class="two-c-col">
+            <img class="fragment fade-in" data-fragment-index="1" src="./img/random_gpt.jpeg"> 
+          </div>
+          <div class="two-c-col">
+            <img class="fragment fade-in" data-fragment-index="2" src="./img/human_random.jpg">
+          </div>
+        </div>
+        </div>
+
+        [Can LLMs Generate Random Numbers? Evaluating LLM Sampling in Controlled Domains](https://arxiv.org/abs/2403.00742) <!-- .element: class="fragment smaller fade-out" data-fragment-index="1" -->
+        ---
+        #### And even more covertly
+        <img src="./img/dialect_gpt.png" height="300px">
+
+        [Dialect prejudice predicts AI decisions about people's character, employability, and criminality](https://arxiv.org/abs/2403.00742) <!-- .element: class="smaller" -->
+        ---
+        ### The rise of fundational models
+        ---
+        ### Do you trust who train LLM?
+        ---
+        ### Human vs AI
+        ---
+        ### Try not to become a no man
+        ---
+        ### Politics of AI
+        ---
+        ### What we can do?
       </textarea>
       </section>
     </div>
@@ -103,7 +188,7 @@
     Reveal.initialize({
       hash: true,
       progress: false,
-      
+      slideNumber: 'c',
       
       // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes]

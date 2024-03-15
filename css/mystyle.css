@@ -1,5 +1,5 @@
 .fragment.blur {
-    filter: blur(5px);
+    filter: blur(10px);
   }
   .fragment.blur.visible {
     filter: none;
@@ -17,15 +17,22 @@
 .two-c-col-r{
   flex: 1;
 }
+.two-c-col {
+  flex: 1;
+}
 :root {
-  --r-main-font-size: 35px;
+  --r-main-font-size: 32px;
 }
 .reveal ul ul {
   list-style-type: "▶  ";
 }
 .smaller {
   font-size: 0.7em;
+}
+.italic {
   font-style: italic;
+}
+.grey {
   color: #AAAAAA;
 }
 div.logos {
@@ -44,4 +51,7 @@ div.logos img {
 }
 section.title-slide-lol {
   background-image: none;
+}
+.long-transition {
+  transition: all 1.5s ease !important;
 }
