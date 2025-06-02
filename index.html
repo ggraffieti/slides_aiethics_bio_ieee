@@ -26,6 +26,8 @@
         
         ## Introduction to AI Safety 
         Gabriele Graffieti
+        <br/>
+        [ggraffieti@ambarella.com](mailto:ggraffieti@ambarella.com) <!-- .element: class="smaller" --> 
         
         ---- 
 
@@ -188,7 +190,6 @@
         - How we tested the model?  <!-- .element: class="fragment" data-fragment-index="1" -->
           - Did train/validation/test sets were collected from the same distribution of data? <!-- .element: class="fragment" data-fragment-index="2" -->
           - What metrics we used to evaluate the performance? <!-- .element: class="fragment" data-fragment-index="3" -->
-          - What we mean by performance? <!-- .element: class="fragment" data-fragment-index="4" -->
 
         Note: 
         Example of bad calibrated cameras in self-driving cars.
@@ -207,7 +208,7 @@
 
         Models are LAZY
         ---
-        #### Who put all those biases into the training data? 
+        #### But, Who put all those biases into the training data? 
         ## You! <!-- .element: class="fragment" data-fragment-index="1" -->
         ---
         ### Biases are in everyday life!
@@ -233,6 +234,16 @@
         <img src="./img/face.jpg" height="300">
         ---
         <!-- .slide: data-auto-animate -->
+        ### From us to AI models
+         <div class="r-stack">
+          <img src="./img/translate.png" height="550">
+          <img class="fragment fade-out long-transition" data-fragment-index="1" src="./img/translate1.png"  height="550">
+          <img class="fragment fade-out long-transition" data-fragment-index="2" src="./img/translate2.png"  height="550">
+          <img class="fragment fade-out long-transition" data-fragment-index="3" src="./img/translate3.png"  height="550">
+          <img class="fragment fade-out long-transition" data-fragment-index="4" src="./img/translate4.png"  height="550">
+        </div>  
+        ---
+        <!-- .slide: data-auto-animate -->
         ### How to deal with bias
         - <!-- .element: class="fragment" data-fragment-index="1" --> <a href="https://www.forbes.com/councils/forbestechcouncil/2025/03/13/the-impossible-dream-why-bias-free-ai-is-a-myth">The Impossible Dream: Why Bias-Free AI Is A Myth</a>
         - Just thinking of and documenting the possible biases that AI models may have is a great step forward (we will discuss this later). <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -250,9 +261,10 @@
               [Mitigating Unwanted Biases with Adversarial Learning](https://dl.acm.org/doi/10.1145/3278721.3278779) <!-- .element: class="fragment smaller" data-fragment-index="5" -->
             - Computing attention to detect biases.  <!-- .element: class="fragment" data-fragment-index="6" -->  
               [Visualizing and Understanding Convolutional Networks](https://link.springer.com/chapter/10.1007/978-3-319-10590-1_53) <!-- .element: class="fragment smaller" data-fragment-index="6" -->
-          - And semi-supervised learining / pseudo-labels?  <!-- .element: class="fragment" data-fragment-index="7" -->
         ---
-        [Demo](https://colab.research.google.com/drive/1nSIbchuITfdvlbjF-4R9aerTdsjHa5CV)
+        ### How to find biases?
+
+        [Demo](https://colab.research.google.com/drive/1nSIbchuITfdvlbjF-4R9aerTdsjHa5CV?usp=sharing) <!-- .element: class="fragment" data-fragment-index="1" -->
         ---
         <!-- .slide: data-auto-animate data-transition="zoom-in slide-out" -->
         Questions? <!-- .element: class="bigger" --> 
@@ -297,7 +309,7 @@
         <br/>
         <br/>
 
-        [Demo!](https://colab.research.google.com/drive/1co74MX84NLvBlu-X79GsyvSk7sMEJg2D?usp=sharing) <!-- .element: class="fragment" data-fragment-index="4" -->
+        [Demo!](https://colab.research.google.com/drive/1ZNuDSqi1TRl6Du_lENjj972PCI94VyT3?usp=sharing) <!-- .element: class="fragment" data-fragment-index="5" -->
         ---
         ### Backdoors in Federated Learning
 
@@ -343,9 +355,9 @@
         ## How to Build Safe AI
         ---
         ### The long and winding road
-        - Buld a 100% safe AI is impossible and beyound our control. <!-- .element: class="fragment" data-fragment-index="1" -->
+        - Buld a 100% safe AI is impossible and beyond our control. <!-- .element: class="fragment" data-fragment-index="1" -->
           - Biases hidden in the data, bad labeling, etc. <!-- .element: class="fragment" data-fragment-index="2" -->
-          - Security flaws in HHDs where the data is stored, libraries/frameworks used, etc. <!-- .element: class="fragment" data-fragment-index="3" -->
+          - Security flaws in servers where the data is stored, libraries/frameworks used, etc. <!-- .element: class="fragment" data-fragment-index="3" -->
           - Adversarial examples, model inversion, flawed third party AIs, etc. <!-- .element: class="fragment" data-fragment-index="4" -->
         - But we can do as better as we can!  <!-- .element: class="fragment" data-fragment-index="5" -->
           - Following guidelines to build safe AIs in the particular domain.   <!-- .element: class="fragment" data-fragment-index="6" -->
@@ -353,8 +365,8 @@
           - Mind that every phase of AI development is important to the overall safety! <!-- .element: class="fragment" data-fragment-index="8" -->
             - From design to data acqusition, to development to end of life! <!-- .element: class="fragment" data-fragment-index="9" -->
         ---
-        ### How to Improve Safety of AIs
-        - <!-- .element: class="fragment" data-fragment-index="1" --> If it's possible use explainable AI models <span class="fragment" data-fragment-index="2">(spoiler: often not possible).</span> 
+        ### How to Improve the Safety of AI
+        - <!-- .element: class="fragment" data-fragment-index="1" --> If it's possible use explainable AI models <span class="fragment" data-fragment-index="2">(<s>always</s> often not possible).</span> 
         - <!-- .element: class="fragment" data-fragment-index="3" --> Use at least 2 <u>totally different</u> AI models in safety critical applications. 
           - Different data used to train them, different model architectures, different outputs, etc.  <!-- .element: class="fragment" data-fragment-index="4" -->
           - Validate the output of each of them with one another.   <!-- .element: class="fragment" data-fragment-index="5" -->
@@ -362,7 +374,6 @@
           - Use simulations or simulated data to test the behavior of the model, especially in corner cases.  <!-- .element: class="fragment" data-fragment-index="7" -->
           - If possile use human actions/decision to calibrate the model.   <!-- .element: class="fragment" data-fragment-index="8" -->
         - Use adversarial models to find out flaws, biases and backdoors in the model.  <!-- .element: class="fragment" data-fragment-index="9" -->
-        - Explore model attention to understand possible biases.  <!-- .element: class="fragment" data-fragment-index="10" -->
 
         Note: 
         2 models -> example amba-aur
@@ -370,12 +381,11 @@
         simulation -> self driving car system active but without control, to check with the driver decision real time. 
         ---
         ### How to Improve Safety of AIS - ISO/PAS 8800
-        - Standard ISO that regulates "Road vehicles — Safety and Artificial Intelligence".  <!-- .element: class="fragment" data-fragment-index="1" -->
-        - Published in Dec. 2024. <!-- .element: class="fragment" data-fragment-index="2" -->
-        - Covers all the use of AI in road vehicles, to driving assistant technologies do ADS (another ISO standard is currently under publication for ADS only). <!-- .element: class="fragment" data-fragment-index="3" -->
-        - Many concepts can be applyied 1:1 to any safety critical domain. <!-- .element: class="fragment" data-fragment-index="4" -->
-        - Full of references to other normatives/ISO standars, from SW/HW testing to IT infrastructure and cybersecurity. <!-- .element: class="fragment" data-fragment-index="5" -->
-        - No mention of possible attacks to AI models. <!-- .element: class="fragment" data-fragment-index="6" -->
+        - Standard ISO that regulates "Road vehicles — Safety and Artificial Intelligence", published in Dec. 2024.  <!-- .element: class="fragment" data-fragment-index="1" -->
+        - Many concepts can be applyied 1:1 to any safety critical domain. <!-- .element: class="fragment" data-fragment-index="2" -->
+        - Focused on producing a lot of safety-related documentation, from safety requisites to data aquisition, storage, model training, deploynment, etc. <!-- .element: class="fragment" data-fragment-index="3" -->
+        - Overall principle → if I'm forced to think about safety, the resulting system will be safer. <!-- .element: class="fragment" data-fragment-index="4" -->
+        - No mention of possible attacks to AI models. <!-- .element: class="fragment" data-fragment-index="5" -->
         ---
         ### ISO/PAS 8800
         - For being certified ISO/PAS 8800 compliant need to satisfy all the safety requirements (or at least have a strong justification if some requirement is not satisfied). <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -384,7 +394,33 @@
           - <!-- .element: class="fragment" data-fragment-index="4" --> Just attach all the documentation and <u>clearly state</u> how the system may fail and in which occasions.
           - Also include untested scenarios (e.g. I only tested my ADS in right-hand drive countries). <!-- .element: class="fragment" data-fragment-index="5" -->
           - Minimize the risk of misuse of AI systems by third parties. <!-- .element: class="fragment" data-fragment-index="6" -->
-            - Will you use an online AI model to evaluate CVs if it is clearly stated that it may contain biases against women, blacks, minorities, etc.? <!-- .element: class="fragment" data-fragment-index="7" -->
+            - Will you use an online AI model to evaluate symptoms of a patient if it is clearly stated that it may contain biases against women, blacks, minorities, etc.? <!-- .element: class="fragment" data-fragment-index="7" -->
+        ---
+        <!-- .slide: data-transition="slide-in fade-out" -->
+        ### To summarize
+        - The widespread adoption of AI in high risk applications pose significant safety risks. <!-- .element: class="fragment" data-fragment-index="1" -->
+        - AI models may (and will) have unexpected bad outcomes.  <!-- .element: class="fragment" data-fragment-index="2" -->
+          - Bias on the data/model is a major enemy. <!-- .element: class="fragment" data-fragment-index="3" -->
+          - It is often impossible to predict a priori all the possible bad outcomes. <!-- .element: class="fragment" data-fragment-index="4" -->
+        - Malicious individuals may (and will) attack AI models and the data they are trained on. <!-- .element: class="fragment" data-fragment-index="5" -->
+        ---
+        <!-- .slide: data-auto-animate -->
+        ### My personal advice
+        - Always think about the possible safety problems of your AI system. <!-- .element: class="fragment" data-fragment-index="1" -->
+          - From data aquisition to deployment (and beyond!). <!-- .element: class="fragment" data-fragment-index="2" -->
+        - Invest time analyzing training data, how and who acquired it, how it is stored, possible biases, etc. <!-- .element: class="fragment" data-fragment-index="3" -->
+        - Analyze possible attack scenarios of your models, minding that if it's attackable, it will be attacked. <!-- .element: class="fragment" data-fragment-index="4" -->
+        - Do not fall for easy and fast enthusiasm: the possible bad outcomes are often hidden and difficult to spot. <!-- .element: class="fragment" data-fragment-index="5" -->
+        - On the other hand, try to not become resistant, anti, or too critic of AI.  <!-- .element: class="fragment" data-fragment-index="6" -->
+        - Document and share any possible problem with your model! <!-- .element: class="fragment" data-fragment-index="7" -->
+        ---
+        <!-- .slide: data-auto-animate -->
+        <img src="./img/thatsall_white.png" height="300px">
+        ---
+        <!-- .slide: data-auto-animate" -->
+        Questions? <!-- .element: class="bigger" --> 
+
+        Discussion? <!-- .element: class="bigger" --> 
         ---
         <section>
 
@@ -534,34 +570,11 @@
           <img src="./img/gptcc.png" height="500">
         </section>
         ---
-        <!-- .slide: data-transition="slide-in fade-out" -->
-        ### To summarize
-        - The widespread adoption of AI in high risk applications pose significant safety risks. <!-- .element: class="fragment" data-fragment-index="1" -->
-        - AI models may (and will) have unexpected bad outcomes.  <!-- .element: class="fragment" data-fragment-index="2" -->
-          - Bias on the data/model is a major enemy. <!-- .element: class="fragment" data-fragment-index="3" -->
-          - It is often impossible to predict a priori all the possible bad outcomes. <!-- .element: class="fragment" data-fragment-index="4" -->
-        - Malicious individuals may (and will) attack AI models and the data they are trained on. <!-- .element: class="fragment" data-fragment-index="5" -->
-        ---
-        <!-- .slide: data-auto-animate -->
-        ### My personal advice
-        - Always think about the possible safety problems of your AI system. <!-- .element: class="fragment" data-fragment-index="1" -->
-          - From data aquisition to deployment (and beyond!). <!-- .element: class="fragment" data-fragment-index="2" -->
-        - Invest time analyzing training data, how and who acquired it, how it is stored, possible biases, etc. <!-- .element: class="fragment" data-fragment-index="3" -->
-        - Analyze possible attack scenarios of your models, minding that if it's attackable, it will be attacked. <!-- .element: class="fragment" data-fragment-index="4" -->
-        - Do not fall for easy and fast enthusiasm: the possible bad outcomes are often hidden and difficult to spot. <!-- .element: class="fragment" data-fragment-index="5" -->
-        - On the other hand, try to not become resistant, anti, or too critic of AI.  <!-- .element: class="fragment" data-fragment-index="6" -->
-        ---
-        <!-- .slide: data-auto-animate -->
-        <img src="./img/thatsall_white.png" height="300px">
-        ---
-        <!-- .slide: data-auto-animate" -->
-        Questions? <!-- .element: class="bigger" --> 
-
-        Discussion? <!-- .element: class="bigger" --> 
-        ---
         <!-- .slide: class="title-slide-lol" -->
         ## Introduction to AI Safety 
         Gabriele Graffieti
+        <br/>
+        [ggraffieti@ambarella.com](mailto:ggraffieti@ambarella.com) <!-- .element: class="smaller" --> 
         
         ---- 
 
